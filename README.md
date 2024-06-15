@@ -23,7 +23,6 @@ Este projeto implementa uma API em Node.js que integra com a API do Chuck Norris
 
 3. **Execução**
 
-    Com npm ou yarn:
     ```bash
     node app.js
 
@@ -136,4 +135,4 @@ Retorna:
 ### 🚀 Documentação da API
 Para acessar a documentação da API, visite: 
 - Swagger UI: http://localhost:3000/api-docs
-- GitHub Pages: 
+- GitHub Pages: https://lmicael.github.io/API-Chuck-Norris/
