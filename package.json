@@ -1,0 +1,27 @@
+{
+  "name": "chuck-norris-api",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "keywords": [],
+  "author": "Lucas Micael",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "csv-writer": "^1.6.0",
+    "express": "^4.19.2",
+    "moment": "^2.30.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-dist": "^5.17.14",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
