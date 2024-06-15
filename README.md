@@ -12,7 +12,7 @@ Este projeto implementa uma API em Node.js que integra com a API do Chuck Norris
 1. **Clonar o repositório:**
 
    ```bash
-   git clone 
+   git clone https://github.com/Lmicael/API-Chuck-Norris
 
 2. **Instalar as dependências:**
 
@@ -25,8 +25,7 @@ Este projeto implementa uma API em Node.js que integra com a API do Chuck Norris
 
     Com npm ou yarn:
     ```bash
-    npm start
-    yarn start
+    node app.js
 
 ## 🚀 Rotas Disponíveis
 
