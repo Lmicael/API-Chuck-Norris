@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação API Chuck Norris Jokes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .endpoint {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+        .endpoint h2 {
+            margin-top: 0;
+        }
+        .endpoint p {
+            margin-top: 5px;
+        }
+        .code {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .example {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Documentação API Chuck Norris Jokes</h1>
+
+        <div class="endpoint">
+            <h2>GET /api/logs</h2>
+            <p>Recupera logs com base em parâmetros opcionais:</p>
+            <ul>
+                <li><strong>startDate</strong> (Opcional): Filtra os registros desta data (YYYY-MM-DD).</li>
+                <li><strong>endDate</strong> (Opcional): Filtra os registros até esta data (YYYY-MM-DD).</li>
+                <li>Se nenhum parâmetro for fornecido, retorna a lista completa de logs.</li>
+            </ul>
+            <div class="example">
+                <p>Listar todos os registros de logs:</p>
+                <pre><code class="code">GET "http://localhost:3000/api/logs"</code></pre>
+                <div class="code">
+                    <p>Exemplo de Resposta:</p>
+                    <pre><code>[
+    {
+        "timestamp": "2024-06-14 17:42:21",
+        "type": "random",
+        "query": "",
+        "joke": "Chuck Norris won the Tour De France on a stationary bike."
+    },
+    {
+        "timestamp": "2024-06-14 17:43:17",
+        "type": "search",
+        "query": "telephone",
+        "joke": "Chuck Norris can execute a roundhouse kick in a telephone booth!"
+    },
+    {
+        "timestamp": "2024-06-14 19:47:58",
+        "type": "search",
+        "query": "happy",
+        "joke": "Chuck Norris gets a happy ending when strangling mountain lions."
+    },
+    {
+        "timestamp": "2024-06-14 19:41:35",
+        "type": "random",
+        "query": "",
+        "joke": "When God walked in the sea ... Chuck Norris was swimming in the land!!"
+    }
+]</code></pre>
+                </div>
+                <p></p>
+                <p>Filtrar registros de logs por data:</p>
+                <pre><code class="code">GET "http://localhost:3000/api/logs?startDate=2024-06-14&endDate=2024-06-16"</code></pre>
+            </div>
+            <div class="code">
+                <p>Exemplo de Resposta:</p>
+                <pre><code>[
+    {
+        "timestamp": "2024-06-14 20:01:06",
+        "type": "search",
+        "query": "happy",
+        "joke": "Chuck Norris gets a happy ending when strangling mountain lions."
+    },
+    {
+        "timestamp": "2024-06-14 20:01:33",
+        "type": "search",
+        "query": "car",
+        "joke": "Chuck Norris won the daytona 500 in a flintstone car"
+    },
+    {
+        "timestamp": "2024-06-14 20:02:42",
+        "type": "random",
+        "query": "",
+        "joke": "Chuck Norris can literally break his foot off in your ass."
+    },
+    {
+        "timestamp": "2024-06-15 10:51:50",
+        "type": "random",
+        "query": "",
+        "joke": "Chuck Norris polishes the marble floors of his palaces by moonwalking around them."
+    }
+]</code></pre>
+            </div>
+        </div>
+
+        <div class="endpoint">
+            <h2>GET /api/jokes/random</h2>
+            <p>Recupera uma piada aleatória de Chuck Norris.</p>
+            <div class="example">
+                <p>Obtenha uma piada aleatória:</p>
+                <pre><code class="code">GET "http://localhost:3000/api/jokes/random"</code></pre>
+            </div>
+            <div class="code">
+                <p>Exemplo de Resposta:</p>
+                <pre><code>{
+  "joke": "Chuck Norris doesn't read books. He stares them down until he gets the information he wants."
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="endpoint">
+            <h2>GET /api/jokes/search</h2>
+            <p>Recupera piadas de Chuck Norris contendo a string de consulta especificada.</p>
+            <p><strong>Parâmetros de consulta:</strong></p>
+            <ul>
+                <li><strong>query</strong>: Termo para pesquisar em piadas.</li>
+            </ul>
+            <div class="example">
+                <p>Procure piadas que contenham "money":</p>
+                <pre><code class="code">GET "http://localhost:3000/api/jokes/search?query=money"</code></pre>
+            </div>
+            <div class="code">
+                <p>Exemplo de Resposta:</p>
+                <pre><code>{
+    "joke": "When Chuck Norris calls 1-900 numbers, he doesn't get charged. He holds up the phone and 
+    money falls out."
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="example">
+            <p>Para mais informações sobre configuração e execução do projeto, consulte o arquivo README.md no <a href="https://github.com/Lmicael/API-Chuck-Norris/blob/main/README.md">repositório</a>.</p>
+        </div>
+
+    </div>
+</body>
+</html>
